@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Media</title>
+</head>
+<body>
+    <h2>Upload Your Name and File</h2>
+           <form action={% url "add_media" %} method="POST" >
+            {% csrf_token %}
+            {{ form.as_p }}
+            
+            <button type="submit">Upload</button>
+        </form>
+</body>
+</html>

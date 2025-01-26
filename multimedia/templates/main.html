@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover high-quality multimedia content with our website. Explore videos, images, and audio like never before!">
+    <title>Multimedia Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('https://via.placeholder.com/1500x500') center/cover no-repeat;
+            color: white;
+        }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin: 0 0 20px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #ff6b6b;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .hero button:hover {
+            background-color: #ee5253;
+        }
+        .content-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .content-section h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h4 {
+            margin: 0 0 10px;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Multimedia Hub</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="{% url 'add_media' %}">Add Media</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to the Multimedia Experience</h2>
+    <p>Explore stunning visuals, immersive audio, and captivating stories in one place.</p>
+    <button>Get Started</button>
+</section>
+
+<section class="content-section">
+    <h3>Our Features</h3>
+    <div class="cards">
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="High-Quality Videos">
+            <div class="card-content">
+                <h4>High-Quality Videos</h4>
+                <p>Stream videos in HD and 4K with no buffering issues.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Stunning Photography">
+            <div class="card-content">
+                <h4>Stunning Photography</h4>
+                <p>Explore breathtaking images from top photographers.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300x200" alt="Immersive Audio">
+            <div class="card-content">
+                <h4>Immersive Audio</h4>
+                <p>Enjoy high-quality audio content for music and podcasts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Multimedia Hub. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
