@@ -28,8 +28,7 @@ SECRET_KEY = 'django-insecure-&#n&1$&)vh+n+hq*&-bwykb4+%l2+ci87@+2z)fd)cqdy&m7!=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [  ]
-
+ALLOWED_HOSTS = [ '.vercel.app'] 
 
 # Application definition
 
@@ -125,9 +124,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATIC_FILES_STORAGE= whitenoise.storage.CompressedManifestStaticFilesStorage
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#django_heroku.settings(locals())
